@@ -1,0 +1,33 @@
+{
+  "name": "react-native-inset-shadow",
+  "version": "1.0.0",
+  "description": "Inset shadows for react native components",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohailaltaf/react-native-inset-shadow.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "inset",
+    "shadow",
+    "component"
+  ],
+  "author": "Rohail Altaf",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/rohailaltaf/react-native-inset-shadow/issues"
+  },
+  "homepage": "https://github.com/rohailaltaf/react-native-inset-shadow#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  }
+}
