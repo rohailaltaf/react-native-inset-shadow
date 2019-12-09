@@ -4,7 +4,7 @@ import Shadow from './shadow'
 const shadowTypes = ['left', 'top', 'right', 'bottom']
 
 const Shadows = (props) => {
-  return shadowTypes.map(shadow => {
+  return shadowTypes.map((shadow, i) => {
     if(!props[shadow]) {
       return null
     }
@@ -17,7 +17,7 @@ const Shadows = (props) => {
       elevation
     }
     return (
-      <Shadow type={shadow} {...shadowProps}  />
+      <Shadow key={`shadow-${i}`} type={shadow} {...shadowProps}  />
     )
   })
 }
