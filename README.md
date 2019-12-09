@@ -40,8 +40,8 @@ const ViewWithInsetShadow = () => {
 | right         | bool   | true    | (Optional) show right inset shadow?                                      |
 | bottom        | bool   | true    | (Optional) show bottom inset shadow?                                     |
 | shadowColor   | string | black   | (Optional) shadow color                                                  |
-| shadowOffset  | string | 1       | (Optional) how much to offset the shadow on the horizontal/vertical axis |
-| shadowOpacity | string | 0.5     | (Optional) shadow opacity                                                |
+| shadowOffset  | number | 1       | (Optional) how much to offset the shadow on the horizontal/vertical axis |
+| shadowOpacity | number | 0.5     | (Optional) shadow opacity                                                |
 | shadowRadius  | number | 3       | (Optional) shadow radius                                                 |
 | elevation     | number | 5       | (Optional) shadow elevation for android                                  |
 
