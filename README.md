@@ -1,7 +1,9 @@
+[![npm version](https://badge.fury.io/js/react-native-inset-shadow.svg)](https://badge.fury.io/js/react-native-inset-shadow)
+
 # react-native-inset-shadow
 Inset shadows for react native components
 
-<p align="center">
+<p align="left">
 <img src="./.github/images/img.png" height="150" />
 </p>
 
