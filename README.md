@@ -1,6 +1,10 @@
 # react-native-inset-shadow
 Inset shadows for react native components
 
+<p align="center">
+<img src="./.github/images/img.png" height="150" />
+</p>
+
 ## Setup
 
 This library is available on npm, install it with: `npm i react-native-inset-shadow` or `yarn add react-native-inset-shadow`
