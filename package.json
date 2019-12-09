@@ -1,6 +1,6 @@
 {
   "name": "react-native-inset-shadow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Inset shadows for react native components",
   "main": "src/index.js",
   "scripts": {
