@@ -6,6 +6,7 @@ import Shadows from './shadows'
 
 const InsetShadow = ({ 
   children,
+  containerStyle,
   left,
   top,
   right,
@@ -28,7 +29,7 @@ const InsetShadow = ({
     elevation
   }
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       {children}
       <Shadows {...shadowProps} />
     </View>
@@ -37,6 +38,8 @@ const InsetShadow = ({
 
 InsetShadow.propTypes = {
   children: PropTypes.node.isRequired,
+  /* (default: {}) add style to the wrapper */
+  containerStyle: PropTypes.object,
   /* (default: true) show the left shadow? */
   left: PropTypes.bool,
   /* (default: true) show the top shadow? */
@@ -58,6 +61,7 @@ InsetShadow.propTypes = {
 }
 
 InsetShadow.defaultProps = {
+  containerStyle: {},
   left: true,
   top: true,
   right: true,
