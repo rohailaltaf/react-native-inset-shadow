@@ -44,6 +44,7 @@ const ViewWithInsetShadow = () => {
 | shadowOpacity | number | 0.5     | (Optional) shadow opacity                                                |
 | shadowRadius  | number | 3       | (Optional) shadow radius                                                 |
 | elevation     | number | 5       | (Optional) shadow elevation for android                                  |
+| containerStyle| object | {}      | (Optional) style for the container                                       |
 
 
 ## Roadmap
