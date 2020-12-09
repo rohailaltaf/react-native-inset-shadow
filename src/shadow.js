@@ -1,23 +1,23 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Animated } from 'react-native'
 import styles from './styles'
 
 const getShadowOffset = (type, offset) => {
-  switch(type) {
+  switch (type) {
     case ['top', 'bottom'].includes(type):
       return {
         width: 0,
-        height: offset
+        height: offset,
       }
     case ['left', 'right'].includes(type):
       return {
         width: offset,
-        height: 0
+        height: 0,
       }
     default:
       return {
         width: 0,
-        height: 0
+        height: 0,
       }
   }
 }
@@ -28,18 +28,18 @@ const Shadow = ({
   shadowOpacity,
   shadowOffset,
   shadowRadius,
-  elevation
+  elevation,
+  containerOpacity,
 }) => {
   const shadowStyle = {
-    shadowColor: shadowColor,
+    shadowColor,
     shadowOffset: getShadowOffset(type, shadowOffset),
-    shadowRadius: shadowRadius,
-    shadowOpacity: shadowOpacity,
-    elevation: elevation
+    shadowRadius,
+    shadowOpacity,
+    elevation,
+    opacity: containerOpacity,
   }
-  return (
-    <View style={[styles.shadow, styles[type], shadowStyle]} />
-  )
+  return <Animated.View style={[styles.shadow, styles[type], shadowStyle]} />
 }
 
 export default Shadow

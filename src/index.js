@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './styles'
 import Shadows from './shadows'
 
-const InsetShadow = ({ 
+const InsetShadow = ({
   children,
   containerStyle,
   left,
@@ -15,7 +15,8 @@ const InsetShadow = ({
   shadowRadius,
   shadowOffset,
   shadowOpacity,
-  elevation
+  elevation,
+  containerOpacity,
 }) => {
   const shadowProps = {
     left,
@@ -26,7 +27,8 @@ const InsetShadow = ({
     shadowRadius,
     shadowOffset,
     shadowOpacity,
-    elevation
+    elevation,
+    containerOpacity,
   }
   return (
     <View style={[styles.container, containerStyle]}>
@@ -52,12 +54,14 @@ InsetShadow.propTypes = {
   shadowColor: PropTypes.string,
   /* (default: 3) shadow radius */
   shadowRadius: PropTypes.number,
-  /* (default: 1) shadow offset - height for top, bottom, width for left, right */ 
+  /* (default: 1) shadow offset - height for top, bottom, width for left, right */
   shadowOffset: PropTypes.number,
   /* (default 0.5) shadow opacity */
   shadowOpacity: PropTypes.number,
   /* (default: 5) shadow elevation for android */
   elevation: PropTypes.number,
+  /* (default: 1) opacity for the shadow. Mainly used for animated */
+  containerOpacity: PropTypes.oneOfType([PropTypes.number, PropTypes.objectOf(PropTypes.shape)]),
 }
 
 InsetShadow.defaultProps = {
@@ -71,6 +75,7 @@ InsetShadow.defaultProps = {
   shadowOffset: 5,
   shadowOpacity: 0.5,
   elevation: 5,
+  containerOpacity: 1,
 }
 
 export default InsetShadow

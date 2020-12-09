@@ -32,19 +32,20 @@ const ViewWithInsetShadow = () => {
 
 ## Props
 
-| Name          | Type   | Default | Description                                                              |
-| ------------- | ------ | ------- | ------------------------------------------------------------------------ |
-| children      | node   | null    | **(Required)** child components to sit inside the view                   |
-| left          | bool   | true    | (Optional) show left inset shadow?                                       |
-| top           | bool   | true    | (Optional) show top inset shadow?                                        |
-| right         | bool   | true    | (Optional) show right inset shadow?                                      |
-| bottom        | bool   | true    | (Optional) show bottom inset shadow?                                     |
-| shadowColor   | string | black   | (Optional) shadow color                                                  |
-| shadowOffset  | number | 1       | (Optional) how much to offset the shadow on the horizontal/vertical axis |
-| shadowOpacity | number | 0.5     | (Optional) shadow opacity                                                |
-| shadowRadius  | number | 3       | (Optional) shadow radius                                                 |
-| elevation     | number | 5       | (Optional) shadow elevation for android                                  |
-| containerStyle| object | {}      | (Optional) style for the container                                       |
+| Name            | Type   | Default | Description                                                              |
+| --------------  | ------ | ------- | ------------------------------------------------------------------------ |
+| children        | node   | null    | **(Required)** child components to sit inside the view                   |
+| left            | bool   | true    | (Optional) show left inset shadow?                                       |
+| top             | bool   | true    | (Optional) show top inset shadow?                                        |
+| right           | bool   | true    | (Optional) show right inset shadow?                                      |
+| bottom          | bool   | true    | (Optional) show bottom inset shadow?                                     |
+| shadowColor     | string | black   | (Optional) shadow color                                                  |
+| shadowOffset    | number | 1       | (Optional) how much to offset the shadow on the horizontal/vertical axis |
+| shadowOpacity   | number | 0.5     | (Optional) shadow opacity                                                |
+| shadowRadius    | number | 3       | (Optional) shadow radius                                                 |
+| elevation       | number | 5       | (Optional) shadow elevation for android                                  |
+| containerStyle  | object | {}      | (Optional) style for the container                                       |
+| containerOpacity| number, Animated.Value(number) | {}      | (Optional) Control opacity of container.         |
 
 
 ## Roadmap
