@@ -1,26 +1,19 @@
 import React from 'react'
 import Shadow from './shadow'
 
-const shadowTypes = ['left', 'top', 'right', 'bottom']
-
-const Shadows = (props) => {
-  return shadowTypes.map((shadow, i) => {
-    if(!props[shadow]) {
-      return null
-    }
-    const { shadowColor, shadowOpacity, shadowOffset, shadowRadius, elevation } = props
-    const shadowProps = {
-      shadowColor,
-      shadowOpacity,
-      shadowOffset,
-      shadowRadius,
-      elevation
-    }
-    return (
-      <Shadow key={`shadow-${i}`} type={shadow} {...shadowProps}  />
-    )
-  })
-}
+const Shadows = ({
+                   top = true,
+                   bottom = true,
+                   right = true,
+                   left = true,
+                   ...props}) => (
+  <>
+    {top && <Shadow type="top" {...props} />}
+    {bottom && <Shadow type="bottom" {...props} />}
+    {left && <Shadow type="left" {...props} />}
+    {right && <Shadow type="right" {...props} />}
+  </>
+);
 
 // default to show all edges
 Shadows.defaultProps = {

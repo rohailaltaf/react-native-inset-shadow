@@ -1,6 +1,6 @@
 {
   "name": "react-native-inset-shadow",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Inset shadows for react native components",
   "main": "src/index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "react-native": "*"
   },
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react-native-drop-shadow": "0.0.4"
   }
 }

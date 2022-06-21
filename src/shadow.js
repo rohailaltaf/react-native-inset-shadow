@@ -1,6 +1,7 @@
 import React from 'react'
-import { View } from 'react-native'
+import {View} from 'react-native'
 import styles from './styles'
+import DropShadow from "react-native-drop-shadow";
 
 const getShadowOffset = (type, offset) => {
   switch(type) {
@@ -22,24 +23,10 @@ const getShadowOffset = (type, offset) => {
   }
 }
 
-const Shadow = ({
-  type,
-  shadowColor,
-  shadowOpacity,
-  shadowOffset,
-  shadowRadius,
-  elevation
-}) => {
-  const shadowStyle = {
-    shadowColor: shadowColor,
-    shadowOffset: getShadowOffset(type, shadowOffset),
-    shadowRadius: shadowRadius,
-    shadowOpacity: shadowOpacity,
-    elevation: elevation
-  }
-  return (
-    <View style={[styles.shadow, styles[type], shadowStyle]} />
-  )
-}
+const Shadow = ({type, backgroundColor = 'white', shadowOffset, ...shadowProps}) => (
+  <DropShadow style={[styles.shadow, styles[type], shadowProps, {shadowOffset: getShadowOffset(type, shadowOffset)}]}>
+    <View style={{height: '100%', width: '100%', backgroundColor}} />
+  </DropShadow>
+);
 
 export default Shadow
