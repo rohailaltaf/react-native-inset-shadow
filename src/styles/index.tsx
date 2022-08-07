@@ -7,7 +7,6 @@ export default StyleSheet.create({
   },
   shadow: {
     position: 'absolute',
-    backgroundColor: 'white',
     alignSelf: 'center',
   },
   left: {

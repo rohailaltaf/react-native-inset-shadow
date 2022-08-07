@@ -1,14 +1,20 @@
 {
-  "name": "react-native-inset-shadow",
-  "version": "1.0.3",
+  "name": "@wave909/react-native-inset-shadow",
+  "version": "2.1.2",
   "description": "Inset shadows for react native components",
-  "main": "src/index.js",
+  "main": "lib/module/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "lib/module/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "build": "tsc --project ./tsconfig.json",
+    "lint": "tslint --fix -p ./tsconfig.json",
+    "prepare": "bob build",
+    "ts-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rohailaltaf/react-native-inset-shadow.git"
+    "url": "git+https://github.com/wave909/react-native-inset-shadow.git"
   },
   "keywords": [
     "react",
@@ -20,14 +26,41 @@
   "author": "Rohail Altaf",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/rohailaltaf/react-native-inset-shadow/issues"
+    "url": "https://github.com/wave909/react-native-inset-shadow/issues"
   },
-  "homepage": "https://github.com/rohailaltaf/react-native-inset-shadow#readme",
+  "homepage": "https://github.com/wave909/react-native-inset-shadow#readme",
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
   },
+  "devDependencies": {
+    "@types/lodash": "^4.14.173",
+    "@types/react": "^17.0.21",
+    "@types/react-native": "^0.65.0",
+    "eslint": "^7.32.0",
+    "react": "^17.0.2",
+    "react-native": "^0.65.1",
+    "react-native-builder-bob": "^0.18.1",
+    "typescript": "^4.4.3"
+  },
   "dependencies": {
-    "prop-types": "^15.7.2"
-  }
+    "react-native-drop-shadow": "0.0.4"
+  },
+  "files": [
+    "src",
+    "lib",
+    "lib/**/*"
+  ],
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "module",
+      "typescript"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ]
 }

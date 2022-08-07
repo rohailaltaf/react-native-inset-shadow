@@ -1,7 +1,11 @@
-[![npm version](https://badge.fury.io/js/react-native-inset-shadow.svg)](https://badge.fury.io/js/react-native-inset-shadow)
+[![npm version](https://badge.fury.io/js/@wave909%2Freact-native-inset-shadow.svg)](https://badge.fury.io/js/@wave909%2Freact-native-inset-shadow)
 
-# react-native-inset-shadow
+# @wave909/react-native-inset-shadow
 Inset shadows for react native components
+
+Fork of https://github.com/rohailaltaf/react-native-inset-shadow that adds support for:
+ * Full Android styling
+ * TypeScript
 
 <p align="left">
 <img src="./.github/images/img.png" height="150" />
@@ -9,7 +13,7 @@ Inset shadows for react native components
 
 ## Setup
 
-This library is available on npm, install it with: `npm i react-native-inset-shadow` or `yarn add react-native-inset-shadow`
+This library is available on npm, install it with: `npm i @wave909/react-native-inset-shadow` or `yarn add @wave909/react-native-inset-shadow`
 
 ## Usage
 
@@ -45,7 +49,3 @@ const ViewWithInsetShadow = () => {
 | shadowRadius  | number | 3       | (Optional) shadow radius                                                 |
 | elevation     | number | 5       | (Optional) shadow elevation for android                                  |
 | containerStyle| object | {}      | (Optional) style for the container                                       |
-
-
-## Roadmap
-- [ ] Add linter
